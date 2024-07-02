@@ -1,0 +1,146 @@
+.header {
+  background-color: #000;
+  padding: 20px 40px;
+}
+.select {
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center;
+}
+
+.button {
+  padding: 5px;
+  background-color: #6d5e5e;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+}
+.button.selected {
+  background-color: red; /* Example styling for selected genres */
+}
+.year {
+  color: #ffffff;
+  padding: 10px;
+}
+.mbody {
+  background-color: #22254b;
+}
+
+.moives {
+  height: 90vh;
+  padding: 20px;
+  margin: 10px;
+  background-color: #373b69;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  object-fit: cover;
+  overflow: hidden;
+}
+.img {
+  width: 100%;
+  height: 65vh;
+  object-fit: cover;
+}
+.caption {
+  color: #fff;
+}
+.overview {
+  height: 30vh;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transition: all 0.4s ease-in-out;
+  height: 100%;
+  background-color: #fff;
+  color: #000;
+  overflow: hidden;
+  padding: 10px;
+  transform: translateY(100%);
+  object-fit: contain;
+}
+.moives:hover .overview {
+  transform: translateY(0);
+}
+.color {
+  background-color: #22254b;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px;
+}
+.green {
+  color: green;
+}
+.orange {
+  color: orange;
+}
+.red {
+  color: red;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+// Media Query for mobile
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .header {
+    padding: 0px 20px;
+  }
+  .select {
+    gap: 5px;
+   overflow-x: auto;
+   object-fit: cover;
+  }
+  .moives {
+    height: 45vh;
+    padding: 10px;
+    margin: 5px;
+    background-color: #373b69;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    object-fit: cover;
+    overflow: hidden;
+  }
+  .img {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+  }
+}
+
+
+
+// Media Query for Tab
+@media only screen and (min-width: 580px) and (max-width: 800px) {
+  .header {
+    padding: 0px 20px;
+  }
+  .select {
+    gap: 5px;
+   overflow-x: auto;
+   object-fit: cover;
+  }
+  .moives {
+    height: 55vh;
+    padding: 10px;
+    margin: 5px;
+    background-color: #373b69;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    object-fit: cover;
+    overflow: hidden;
+  }
+  .img {
+    width: 100%;
+    height: 35vh;
+    object-fit: cover;
+  }
+}

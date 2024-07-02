@@ -1,0 +1,53 @@
+<div class="header">
+  <div class="select">
+    <button
+      *ngFor="let info of genres"
+      class="button"
+      (click)="onGenreChange(info.id)"
+      [class.selected]="selectedGenres.includes(info.id)"
+    >
+      {{ info.name }}
+    </button>
+  </div>
+</div>
+<main class="mbody">
+  <div class="container">
+    <h3 class="year">{{ year }}</h3>
+    <div class="row">
+      <div class="col-3 mt-4" *ngFor="let data of movies">
+        <div class="card">
+          <div class="card-body moives">
+            <div>
+              <img
+                [src]="baseImageUrl + posterSize + data.backdrop_path"
+                alt=""
+                class="img"
+              />
+            </div>
+            <div class="caption">
+              <div class="row">
+                <div class="col-9">
+                  <h3>{{ data.original_title }}</h3>
+                </div>
+                <div class="col3">
+                  <span
+                    class="color"
+                    [ngStyle]="{ color: onColor(data.vote_average) }"
+                  >
+                    {{ data.vote_average }}
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="overview">
+              <h3>{{ data.original_title }}</h3>
+              <p>
+                {{ data.overview }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
